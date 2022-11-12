@@ -1,9 +1,7 @@
 #pragma once
 
-typedef struct matrix {
-    int w, h;
-    int** arr;
-} matrix;
+typedef struct matrix matrix;
+
 matrix fill(int w, int h, int item);
 
 matrix rand_fill(int w, int h);
@@ -18,4 +16,6 @@ matrix mat_tran(matrix b);
 
 void mat_free(matrix c);
 
-void mat_copy(matrix b);
+matrix mat_copy(matrix b);
+
+void printmat(matrix b);
